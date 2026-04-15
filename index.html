@@ -6,13 +6,12 @@
     <title>沖繩夏日冒險．5日自駕遊</title>
     <style>
         :root {
-            --primary: #1e3a8a; /* 深藍色 */
-            --accent: #0ea5e9;  /* 亮藍色 */
+            --primary: #1e3a8a; 
+            --accent: #0ea5e9;  
             --bg-color: #f8fafc;
             --card-bg: #ffffff;
-            --tag-bg: #e0f2fe;
-            --tag-text: #0369a1;
-            --link-btn: #f97316; /* 橘色按鈕 */
+            --link-btn: #f97316; 
+            --map-link: #2563eb;
         }
 
         body {
@@ -28,11 +27,7 @@
             color: white;
             padding: 60px 20px;
             text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
-
-        header h1 { margin: 0; font-size: 2.5rem; letter-spacing: 2px; }
-        header p { opacity: 0.9; margin-top: 10px; font-weight: 300; }
 
         .main-container {
             max-width: 800px;
@@ -73,11 +68,21 @@
             line-height: 1.7;
         }
 
-        .item-title {
+        .map-link {
             font-weight: 600;
-            color: #334155;
-            display: block;
-            margin-bottom: 4px;
+            color: var(--map-link);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .map-link:hover {
+            text-decoration: underline;
+        }
+
+        .map-link::after {
+            content: ' 📍';
+            font-size: 0.8em;
         }
 
         .item-desc {
@@ -96,12 +101,6 @@
             border-radius: 8px;
             font-size: 0.85rem;
             margin-top: 8px;
-            transition: all 0.2s;
-        }
-
-        .booking-btn:hover {
-            background-color: #ea580c;
-            transform: scale(1.05);
         }
 
         .hotel-box {
@@ -110,22 +109,12 @@
             padding: 15px;
             border-radius: 12px;
             margin-top: 20px;
-            display: flex;
-            align-items: center;
         }
-
-        .hotel-box i { margin-right: 10px; font-style: normal; }
 
         footer {
             text-align: center;
             padding: 40px;
             color: #94a3b8;
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 600px) {
-            header { padding: 40px 15px; }
-            header h1 { font-size: 1.8rem; }
         }
     </style>
 </head>
@@ -141,99 +130,95 @@
     <div class="day-section">
         <div class="day-title"><span>Day 1</span> 抵達與那霸市區</div>
         <div class="item">
-            <span class="item-title">🚆 抵達那霸機場</span>
-            <span class="item-desc">搭乘單軌列車（Yui Rail）前往「歌町站」（Omoromachi）</span>
-        </div>
-        <div class="item">
-            <span class="item-title">🔑 飯店 Check-in</span>
-            <span class="item-desc">稍作休息，可於新都心附近散步晚餐</span>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Omoromachi+Station" target="_blank">歌町站 (Omoromachi Station)</a>
+            <span class="item-desc">搭乘單軌列車前往新都心</span>
         </div>
         <div class="hotel-box">
-            <i>🏨</i> <strong>入住：自由花園酒店 (Libre Garden Hotel)</strong>
+            🏨 <strong>入住：<a href="https://www.google.com/maps/search/?api=1&query=Libre+Garden+Hotel+Okinawa" target="_blank">自由花園酒店 (Libre Garden Hotel)</a></strong>
         </div>
     </div>
 
     <div class="day-section">
         <div class="day-title"><span>Day 2</span> 北部經典與海洋博之行</div>
         <div class="item">
-            <span class="item-title">🚗 09:00 DFS 營業所取車</span>
-            <span class="item-desc">歌町車站旁取車，展開自駕旅程</span>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=DFS+Galleria+Okinawa+Rental+Car" target="_blank">DFS 營業所（歌町車站）</a>
+            <span class="item-desc">09:00 取車，展開自駕旅程</span>
         </div>
         <div class="item">
-            <span class="item-title">🏝️ 古宇利島</span>
-            <span class="item-desc">跨越古宇利大橋，欣賞絕美的「沖繩藍」海景</span>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Kouri+Island" target="_blank">古宇利島</a>
+            <span class="item-desc">跨越古宇利大橋，欣賞「沖繩藍」海景</span>
         </div>
         <div class="item">
-            <span class="item-title">🐋 美麗海水族館</span>
-            <span class="item-desc">參觀黑潮之海大水槽，這是北部的必去地標</span>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Okinawa+Churaumi+Aquarium" target="_blank">美麗海水族館</a>
+            <span class="item-desc">參觀黑潮之海大水槽</span>
         </div>
         <div class="item">
-            <span class="item-title">🌳 備瀨福木林道</span>
-            <span class="item-desc">緊鄰水族館，可漫步於古色古香的綠色隧道</span>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Bise+Fukugi+Tree+Road" target="_blank">備瀨福木林道</a>
+            <span class="item-desc">古色古香的綠色隧道</span>
         </div>
         <div class="hotel-box">
-            <i>🏨</i> <strong>入住：麗山海景皇宮渡假酒店谷茶灣</strong>
+            🏨 <strong>入住：<a href="https://www.google.com/maps/search/?api=1&query=Rizzan+Sea-Park+Hotel+Tancha-Bay" target="_blank">麗山海景皇宮渡假酒店谷茶灣</a></strong>
         </div>
     </div>
 
     <div class="day-section">
         <div class="day-title"><span>Day 3</span> 中部海底秘境探險</div>
         <div class="item">
-            <span class="item-title">🤿 08:00 真榮田岬 (青洞)</span>
-            <span class="item-desc">世界級奇景「青之洞窟」浮潛</span>
-            <a href="https://s.klook.com/c/mXkYQ9Dn1Q" target="_blank" class="booking-btn">🔗 點我查看預約資訊</a>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Cape+Maeda" target="_blank">真榮田岬 (青洞)</a>
+            <span class="item-desc">08:00 集合，體驗青之洞窟浮潛</span>
+            <a href="https://s.klook.com/c/mXkYQ9Dn1Q" target="_blank" class="booking-btn">🔗 點我查看 Klook 預約</a>
         </div>
         <div class="item">
-            <span class="item-title">🐘 萬座毛</span>
-            <span class="item-desc">欣賞如象鼻般的珊瑚礁斷崖地貌</span>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Cape+Manzamo" target="_blank">萬座毛</a>
+            <span class="item-desc">如象鼻般的珊瑚礁斷崖地貌</span>
         </div>
         <div class="item">
-            <span class="item-title">🗼 殘波岬燈塔</span>
-            <span class="item-desc">壯麗的海蝕崖景觀與白色燈塔</span>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Cape+Zanpa+Lighthouse" target="_blank">殘波岬燈塔</a>
+            <span class="item-desc">壯麗的海蝕崖景觀</span>
         </div>
         <div class="item">
-            <span class="item-title">🎡 美國村 (American Village)</span>
-            <span class="item-desc">異國建築與海濱步道非常適合散步拍美照</span>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Mihama+American+Village" target="_blank">美國村 (American Village)</a>
+            <span class="item-desc">異國建築與海濱步道散步拍美照</span>
         </div>
         <div class="hotel-box">
-            <i>🏨</i> <strong>入住：麗山海景皇宮渡假酒店谷茶灣</strong>
+            🏨 <strong>入住：麗山海景皇宮渡假酒店谷茶灣</strong>
         </div>
     </div>
 
     <div class="day-section">
         <div class="day-title"><span>Day 4</span> 與鯨鯊共舞與海上夕陽</div>
         <div class="item">
-            <span class="item-title">🦈 08:30 讀谷村鯨鯊浮潛</span>
-            <span class="item-desc">(Optional) 近距離感受海洋霸主的震撼</span>
-            <a href="https://s.klook.com/c/7Xd0LD22yJ" target="_blank" class="booking-btn">🔗 點我查看預約資訊</a>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Yomitan+Whale+Shark+Snorkeling" target="_blank">讀谷村鯨鯊浮潛點</a>
+            <span class="item-desc">08:30 (Optional) 近距離感受震撼</span>
+            <a href="https://s.klook.com/c/7Xd0LD22yJ" target="_blank" class="booking-btn">🔗 點我查看 Klook 預約</a>
         </div>
         <div class="item">
             <span class="item-title">🏖️ 飯店休息與設施體驗</span>
-            <span class="item-desc">享受 Rizzan Sea-Park 飯店的沙灘與泳池</span>
+            <span class="item-desc">享受飯店的沙灘與泳池</span>
         </div>
         <div class="item">
             <span class="item-title">🛶 夕陽皮划艇 (Sunset Kayak)</span>
-            <span class="item-desc">在海面上迎接最美的落日餘暉</span>
-            <a href="https://s.klook.com/c/xXWqVG_Q36" target="_blank" class="booking-btn">🔗 點我查看預約資訊</a>
+            <span class="item-desc">在海面上迎接落日餘暉</span>
+            <a href="https://s.klook.com/c/xXWqVG_Q36" target="_blank" class="booking-btn">🔗 點我查看 Klook 預約</a>
         </div>
         <div class="hotel-box">
-            <i>🏨</i> <strong>入住：麗山海景皇宮渡假酒店谷茶灣</strong>
+            🏨 <strong>入住：麗山海景皇宮渡假酒店谷茶灣</strong>
         </div>
     </div>
 
     <div class="day-section">
         <div class="day-title"><span>Day 5</span> 南部人文歷史與歸途</div>
         <div class="item">
-            <span class="item-title">🌊 知念岬公園</span>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Chinen+Misaki+Park" target="_blank">知念岬公園</a>
             <span class="item-desc">欣賞無死角的太平洋海景</span>
         </div>
         <div class="item">
-            <span class="item-title">✈️ 瀨長島 Umikaji Terrace</span>
-            <span class="item-desc">機場附近的小希臘，近距離看飛機起降</span>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Senagajima+Umikaji+Terrace" target="_blank">瀨長島 Umikaji Terrace</a>
+            <span class="item-desc">機場附近的小希臘，看飛機起降</span>
         </div>
         <div class="item">
-            <span class="item-title">🏁 那霸機場</span>
-            <span class="item-desc">還車手續辦理，帶著滿滿回憶返台</span>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Naha+Airport" target="_blank">那霸機場 (OKA)</a>
+            <span class="item-desc">還車手續辦理，準備返台</span>
         </div>
     </div>
 
