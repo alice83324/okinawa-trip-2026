@@ -31,7 +31,7 @@
 
         .main-container {
             max-width: 800px;
-            margin: -30px auto 50px;
+            margin: -30px auto 30px;
             padding: 0 20px;
         }
 
@@ -109,6 +109,31 @@
             padding: 15px;
             border-radius: 12px;
             margin-top: 20px;
+        }
+
+        /* --- 自定義底部照片樣式 --- */
+        .photo-container {
+            max-width: 800px;
+            margin: 0 auto 50px;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .my-photo {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover; /* 保持比例裁剪 */
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border: 8px solid white; /* 拍立得相紙感 */
+            box-sizing: border-box;
+        }
+
+        .photo-caption {
+            margin-top: 15px;
+            color: #64748b;
+            font-style: italic;
+            font-size: 1rem;
         }
 
         footer {
@@ -222,6 +247,11 @@
         </div>
     </div>
 
+</div>
+
+<div class="photo-container">
+    <img src="photo1.jpg" alt="Okinawa Vacation" class="my-photo">
+    <p class="photo-caption">Okinawa Blue, 2026 🌊✨</p>
 </div>
 
 <footer>
