@@ -12,7 +12,9 @@
             --card-bg: #ffffff;
             --link-btn: #f97316; 
             --map-link: #2563eb;
-            --food-tag: #ef4444; /* 新增美食標籤顏色 */
+            --food-tag: #ef4444;
+            --drive-bg: #f1f5f9;
+            --drive-text: #475569;
         }
 
         body {
@@ -69,6 +71,24 @@
             line-height: 1.7;
         }
 
+        /* 開車時間樣式 */
+        .drive-time {
+            background-color: var(--drive-bg);
+            color: var(--drive-text);
+            padding: 5px 15px;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            margin: 10px 0;
+            display: inline-flex;
+            align-items: center;
+            border-left: 3px solid #cbd5e1;
+        }
+
+        .drive-time::before {
+            content: '🚗';
+            margin-right: 8px;
+        }
+
         .map-link {
             font-weight: 600;
             color: var(--map-link);
@@ -86,7 +106,6 @@
             font-size: 0.8em;
         }
 
-        /* 食物特別標示 */
         .food-item::before {
             content: '🍴 ';
         }
@@ -163,82 +182,114 @@
             <span class="item-title">18:05-20:50 桃園飛那霸</span>
         </div>
         <div class="item">
-            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Omoromachi+Station" target="_blank">歌町站 (Omoromachi Station)</a>
+            <a class="map-link" href="#" target="_blank">歌町站 (Omoromachi Station)</a>
             <span class="item-desc">搭乘單軌列車前往新都心</span>
         </div>
         <div class="item food-item">
-            <a class="map-link" href="https://maps.app.goo.gl/sCLZQevWH4gwV2yY7" target="_blank">島唄ライブ鳩間島</a>
+            <a class="map-link" href="#" target="_blank">島唄ライブ鳩間島</a>
             <span class="item-desc">宵夜：沖繩民謠與在地料理 (營業至 00:00)</span>
         </div>
         <div class="hotel-box">
-            🏨 <strong>入住：<a href="https://www.google.com/maps/search/?api=1&query=Libre+Garden+Hotel+Okinawa" target="_blank">自由花園酒店 (Libre Garden Hotel)</a></strong>
+            🏨 <strong>入住：<a href="#" target="_blank">自由花園酒店 (Libre Garden Hotel)</a></strong>
         </div>
     </div>
 
     <div class="day-section">
         <div class="day-title"><span>Day 2</span> 6/13 北部經典與海洋博之行</div>
         <div class="item">
-            <a class="map-link" href="https://maps.app.goo.gl/8GU7wMJfwErmVRux9" target="_blank">09:00-09:30 DFS 營業所（歌町車站）</a>
+            <a class="map-link" href="#" target="_blank">09:00-09:30 DFS 營業所（歌町車站）</a>
             <span class="item-desc">09:00 取車，展開自駕旅程</span>
         </div>
+
+        <div class="drive-time">車程預計：1 小時 10 分 (經高速公路)</div>
+
         <div class="item food-item">
-            <a class="map-link" href="https://maps.app.goo.gl/3fwoPTFgKujLmPip9" target="_blank">10:30-11:00 許田休息站</a>
+            <a class="map-link" href="#" target="_blank">10:30-11:00 許田休息站</a>
             <span class="item-desc">午餐：必吃熱騰騰的「沙翁」與「黃金球」</span>
         </div>
+
+        <div class="drive-time">車程預計：40 分</div>
+
         <div class="item">
-            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Okinawa+Churaumi+Aquarium" target="_blank">12:00-15:00 美麗海水族館</a>
+            <a class="map-link" href="#" target="_blank">12:00-15:00 美麗海水族館</a>
             <span class="item-desc">參觀黑潮之海大水槽</span>
         </div>
+
+        <div class="drive-time">車程預計：5 分</div>
+
         <div class="item">
-            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Bise+Fukugi+Tree+Road" target="_blank">15:00-15:30 備瀨福木林道</a>
+            <a class="map-link" href="#" target="_blank">15:00-15:30 備瀨福木林道</a>
             <span class="item-desc">古色古香的綠色隧道</span>
         </div>
+
+        <div class="drive-time">車程預計：30 分</div>
+
         <div class="item">
-            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Kouri+Island" target="_blank">16:00-18:00 古宇利島</a>
+            <a class="map-link" href="#" target="_blank">16:00-18:00 古宇利島</a>
             <span class="item-desc">跨越古宇利大橋，欣賞「沖繩藍」海景</span>
         </div>
+
         <div class="item food-item">
-            <a class="map-link" href="https://maps.app.goo.gl/k8zihaa8RBatnAhd6" target="_blank">18:00-19:00 古宇利蝦蝦飯 (Kouri Shrimp)</a>
+            <a class="map-link" href="#" target="_blank">18:00-19:00 古宇利蝦蝦飯 (Kouri Shrimp)</a>
             <span class="item-desc">晚餐：超人氣蒜香蝦飯，一邊看海一邊享用</span>
         </div>
+
+        <div class="drive-time">車程預計：1 小時</div>
+
         <div class="hotel-box">
-            🏨 <strong>入住：<a href="https://www.google.com/maps/search/?api=1&query=Rizzan+Sea-Park+Hotel+Tancha-Bay" target="_blank">麗山海景皇宮渡假酒店谷茶灣</a></strong>
+            🏨 <strong>入住：<a href="#" target="_blank">麗山海景皇宮渡假酒店谷茶灣</a></strong>
         </div>
     </div>
 
     <div class="day-section">
         <div class="day-title"><span>Day 3</span> 6/14 中部海底秘境探險</div>
         <div class="item">
-            <span class="item-title">06:30-07:30 飯店早餐</span>
-        </div>
-        <div class="item">
             <span class="item-title">08:00 飯店集合出發</span>
         </div>
+
+        <div class="drive-time">車程預計：20 分</div>
+
         <div class="item">
-            <a class="map-link" href="https://maps.app.goo.gl/YWFETVUt6YhQxPHu6" target="_blank">08:50-11:30 青之洞窟</a>
+            <a class="map-link" href="#" target="_blank">08:50-11:30 青之洞窟</a>
             <span class="item-desc">08:20 集合，體驗青之洞窟浮潛</span>
             <a href="https://www.klook.com/zh-TW/activity/146721-okinawa-japan-blue-cave-diving-snorkeling-boat-course/" target="_blank" class="booking-btn">🔗 點我查看 Klook 預約</a>
         </div>
+
+        <div class="drive-time">車程預計：15 分</div>
+
         <div class="item food-item">
-            <a class="map-link" href="https://maps.app.goo.gl/YA7E9xmK5twgQL2v8" target="_blank">12:00-13:00 元祖海葡萄 總店</a>
+            <a class="map-link" href="#" target="_blank">12:00-13:00 元祖海葡萄 總店</a>
             <span class="item-desc">午餐：沖繩名產海葡萄蓋飯始祖</span>
         </div>
+
+        <div class="drive-time">車程預計：5 分</div>
+
         <div class="item">
-            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Cape+Manzamo" target="_blank">13:00-14:00 萬座毛</a>
+            <a class="map-link" href="#" target="_blank">13:00-14:00 萬座毛</a>
             <span class="item-desc">如象鼻般的珊瑚礁斷崖地貌</span>
         </div>
+
+        <div class="drive-time">車程預計：25 分</div>
+
         <div class="item">
-            <a class="map-link" href="https://maps.app.goo.gl/a1WngV9cLVGP5QUx9" target="_blank">14:30-15:30 殘波岬燈塔</a>
+            <a class="map-link" href="#" target="_blank">14:30-15:30 殘波岬燈塔</a>
             <span class="item-desc">壯麗的海蝕崖景觀</span>
         </div>
+
+        <div class="drive-time">車程預計：30 分</div>
+
         <div class="item">
-            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Mihama+American+Village" target="_blank">16:00-22:00 美國村 (American Village)</a>
+            <a class="map-link" href="#" target="_blank">16:00-22:00 美國村 (American Village)</a>
             <span class="item-desc">異國建築與海濱步道散步拍美照</span>
         </div>
+
         <div class="item food-item">
-            <a class="map-link" href="https://maps.app.goo.gl/VNtjQYjtdcr1gDcQ6" target="_blank">20:00-21:00 燒肉花らんぷ (Hanaranpu)</a>
+            <a class="map-link" href="#" target="_blank">20:00-21:00 燒肉花らんぷ (Hanaranpu)</a>
             <span class="item-desc">晚餐：香氣四溢的日式燒肉盛宴</span>
         </div>
+
+        <div class="drive-time">車程預計：30 分</div>
+
         <div class="hotel-box">
             🏨 <strong>入住：麗山海景皇宮渡假酒店谷茶灣</strong>
         </div>
@@ -253,32 +304,51 @@
         <div class="item">
             <span class="item-title">17:00 飯店集合出發</span>
         </div>
+
+        <div class="drive-time">車程預計：30 分 (往北谷/嘉手納方向)</div>
+
         <div class="item">
-            <a class="map-link" href="https://maps.app.goo.gl/ta5t94TsbqnegzDo9" target="_blank">18:00-20:00 夕陽 SUP</a>
+            <a class="map-link" href="#" target="_blank">18:00-20:00 夕陽 SUP</a>
             <span class="item-desc">17:30 集合，在海面上迎接落日餘暉</span>
             <a href="https://www.kkday.com/zh-tw/product/181422?srsltid=AfmBOooGEM016dclugP4kiSYW-gX5Dhq5zGYUCHggG_hFkjpJou9JZV7" target="_blank" class="booking-btn">🔗 點我查看 kkday 預約</a>
         </div>
+
+        <div class="drive-time">車程預計：25 分</div>
+
         <div class="item food-item">
-            <a class="map-link" href="https://maps.app.goo.gl/a2g5GnXBNAYjHure9" target="_blank">20:30-21:30 沖繩料理 しまぶた屋 恩納本店</a>
+            <a class="map-link" href="#" target="_blank">20:30-21:30 沖繩料理 しまぶた屋 恩納本店</a>
             <span class="item-desc">宵夜：必吃阿古豬蒸籠料理或串燒</span>
         </div>
+
         <div class="hotel-box">
             🏨 <strong>入住：麗山海景皇宮渡假酒店谷茶灣</strong>
         </div>
     </div>
 
     <div class="day-section">
-        <div class="day-title"><span>Day 5</span> 6/16 南部人文歷史與歸途 (YH/啟倫)</div>
+        <div class="day-title"><span>Day 5</span> 6/16 南部人文歷史與歸途</div>
         <div class="item">
-            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Chinen+Misaki+Park" target="_blank">10:00-11:00 知念岬公園</a>
+            <span class="item-title">09:00 飯店退房出發</span>
+        </div>
+
+        <div class="drive-time">車程預計：1 小時 10 分</div>
+
+        <div class="item">
+            <a class="map-link" href="#" target="_blank">10:00-11:00 知念岬公園</a>
             <span class="item-desc">欣賞無死角的太平洋海景</span>
         </div>
+
+        <div class="drive-time">車程預計：45 分</div>
+
         <div class="item">
-            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Senagajima+Umikaji+Terrace" target="_blank">12:00-14:00 瀨長島 Umikaji Terrace</a>
+            <a class="map-link" href="#" target="_blank">12:00-14:00 瀨長島 Umikaji Terrace</a>
             <span class="item-desc">機場附近的小希臘，看飛機起降</span>
         </div>
+
+        <div class="drive-time">車程預計：15 分</div>
+
         <div class="item">
-            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Naha+Airport" target="_blank">14:45 那霸機場 (OKA)</a>
+            <a class="map-link" href="#" target="_blank">14:45 那霸機場 (OKA)</a>
             <span class="item-desc">14:15 還車手續辦理，準備返台</span>
         </div>
         <div class="item">
